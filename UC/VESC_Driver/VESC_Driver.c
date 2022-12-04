@@ -213,7 +213,7 @@ HAL_StatusTypeDef uart_send_command(VESC_t *hvesc, const COMM_PACKET_ID id, floa
  ******************************************************************************************************/
 #ifdef __VESC_CAN_ENABLE
 static uint32_t txmailbox;
-HAL_StatusTypeDef can_send_command(VESC_t *hvesc, const CAN_PACKET_ID id, float value,int all){
+HAL_StatusTypeDef can_send_command(VESC_t *hvesc, const CAN_PACKET_MODE_ID id, float value,int all){
 	uint8_t txbuf[8];
 	int32_t data;
 	CAN_TxHeaderTypeDef TxMessage;

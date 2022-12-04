@@ -110,7 +110,7 @@ typedef enum {
 	CAN_PACKET_SET_CURRENT_HANDBRAKE,
 	CAN_PACKET_SET_CURRENT_HANDBRAKE_REL
 }
-CAN_PACKET_ID;
+CAN_PACKET_MODE_ID;
 #endif
 
 
@@ -179,7 +179,7 @@ void uart_get_command(uint8_t rxbuf[],const COMM_PACKET_ID id, void *data);
 
 
 #ifdef __VESC_CAN_ENABLE	
-HAL_StatusTypeDef can_send_command(VESC_t *hvesc, const CAN_PACKET_ID id, float value,int all);
+HAL_StatusTypeDef can_send_command(VESC_t *hvesc, const CAN_PACKET_MODE_ID id, float value,int all);
 void can_get_command(CAN_RxHeaderTypeDef  *RxHeader,uint8_t rxbuf[], void *data);
 
 #define VESC_CAN_SET_DUTY(vesc,duty) 					can_send_command(vesc,CAN_PACKET_SET_DUTY,duty,0)

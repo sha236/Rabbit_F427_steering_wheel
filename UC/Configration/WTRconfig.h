@@ -9,11 +9,9 @@
 
 //1.1VESC can
 
-    #define __VESC_CAN_ENABLE 1
     #define wtrcfg_VESC_MODE_CAN 1
 
 //1.2VESC uart
 
-    //#define wtrcfg_VESC_MODE_UART 0
-    #define wtrcfg_VESC_MODE_UART 
+    #define wtrcfg_VESC_MODE_UART 0
     //#define wtrcfg_VESC_UART_TIMEOUT
